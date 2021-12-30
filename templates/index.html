@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+       </style>
+</head>
+<body>
+
+<h1>Playlist</h1>
+<table>
+    <tr>
+        <th>Song</th>
+        <th>num</th>
+        <th>Options</th>
+    </tr>
+        {% for i in value %}
+            <tr>
+                <td>{{ i[1] }}</td>
+                <td>{{ i[0] }}</td>
+
+                <td>
+                    <form action="/playlist/playing/{{ i[0] }}" method ="post">
+                        <input type="hidden" name="hidden" value="{{ i[2] }}">
+                        <input type="submit" value="play">
+                    </form>
+                    <form action="/playlist/" method ="post">
+                        <input type="submit" name="submit_button" value="pause">
+                    </form>
+                </td>
+             </tr>
+        {% endfor %}
+
+</table>
+<form action="upload" method ="get">
+    <input type="submit" name="upload_button" value="upload">
+</form>
+
+</body>
+</html>
+
+
+
