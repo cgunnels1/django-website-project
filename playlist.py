@@ -1,4 +1,4 @@
-import mysql.connector
+import mysql.connector, os
 from flask import Flask, request, render_template, url_for, redirect
 from werkzeug.utils import secure_filename
 from pygame import mixer
@@ -8,6 +8,14 @@ DIR = 'C:\projects\python-playlist-project\music_lib'+'\\'
 
 app = Flask(__name__)
 mixer.init()
+
+#when file is uploaded, method saves file to music_lib directory
+def create_file_copy():
+    file = request.files['path']
+    # check if the file has been uploaded
+    if file:
+        filename = secure_filename(file.filename)
+        file.save(os.path.join(DIR, filename))
 
 #creates database and table if database does not exist
 def create_database_if_not_exist():
@@ -118,6 +126,7 @@ def upload_form():
     if request.method == 'POST':
         filename = get_file_name()
         pathname = get_path_name()
+        create_file_copy()
         insertDATA(filename, pathname)
     if request.method == 'GET':
         print("GET")
