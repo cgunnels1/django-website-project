@@ -4,7 +4,7 @@ from werkzeug.utils import secure_filename
 from pygame import mixer
 
 
-DIR = "C:/projects/python-playlist-project/music_lib/"
+DIR = "C:/projects/django-website-project/music_lib/"
 
 app = Flask(__name__)
 mixer.init()
