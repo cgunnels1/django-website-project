@@ -4,10 +4,11 @@ from werkzeug.utils import secure_filename
 from pygame import mixer
 
 
-DIR = 'C:\projects\python-playlist-project\music_lib'+'\\'
+DIR = "C:/projects/python-playlist-project/music_lib/"
 
 app = Flask(__name__)
 mixer.init()
+
 
 #when file is uploaded, method saves file to music_lib directory
 def create_file_copy():
