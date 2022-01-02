@@ -3,16 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Upload</title>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        li {
+          float: left;
+        }
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+
+        li a:hover {
+          background-color: #111;
+        }
+    </style>
 </head>
 <body>
+    <ul>
+      <li><a class="active" href="/playlist">Home</a></li>
+      <li><a href="/playlist/upload">Upload</a></li>
+
+    </ul>
     <h1>Upload New File</h1>
     <form method=post enctype=multipart/form-data>
 
         <input type=file name=path>
         <input type=submit value=Upload>
     </form>
-<form action="/playlist/" method ="post">
-    <input type=submit name="submit_button" value="homepage">
 </form>
 </body>
 </html>

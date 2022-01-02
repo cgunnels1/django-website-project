@@ -19,41 +19,59 @@
         tr:nth-child(even) {
           background-color: #dddddd;
         }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        li {
+          float: left;
+        }
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+
+        li a:hover {
+          background-color: #111;
+        }
        </style>
 </head>
 <body>
+    <ul>
+      <li><a class="active" href="/playlist">Home</a></li>
+      <li><a href="/playlist/upload">Upload</a></li>
 
-<h1>Playlist</h1>
-<table>
-    <tr>
-        <th>Song</th>
-        <th>num</th>
-        <th>Options</th>
-    </tr>
-        {% for i in value %}
-            <tr>
-                <td>{{ i[1] }}</td>
-                <td>{{ i[0] }}</td>
+    </ul>
+    <h1>Playlist</h1>
+    <table>
+        <tr>
+            <th>Song</th>
+            <th>num</th>
+            <th>Options</th>
+        </tr>
+            {% for i in value %}
+                <tr>
+                    <td>{{ i[1] }}</td>
+                    <td>{{ i[0] }}</td>
 
-                <td>
-                    <form action="/playlist/playing/{{ i[0] }}" method ="post">
-                        <input type="hidden" name="hidden" value="{{ i[2] }}">
-                        <input type="submit" value="play">
-                    </form>
-                    <form action="/playlist/" method ="post">
-                        <input type="submit" name="submit_button" value="pause">
-                    </form>
-                </td>
-             </tr>
-        {% endfor %}
+                    <td>
+                        <form action="/playlist/playing/{{ i[0] }}" method ="post">
+                            <input type="hidden" name="hidden" value="{{ i[2] }}">
+                            <input type="submit" value="play">
+                        </form>
+                        <form action="/playlist/" method ="post">
+                            <input type="submit" name="submit_button" value="pause">
+                        </form>
+                    </td>
+                 </tr>
+            {% endfor %}
 
-</table>
-<form action="upload" method ="get">
-    <input type="submit" name="upload_button" value="upload">
-</form>
-
+    </table>
 </body>
 </html>
-
-
-
