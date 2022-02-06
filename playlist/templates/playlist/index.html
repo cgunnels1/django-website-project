@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+    <h1>This is our list of songs</h1>
+    {% for song in song_objects %}
+        <p>{{ song.name }}</p>
+    {% endfor %}
+
+<form action="/your-name/" method="post">
+    <label for="your_name">Your name: </label>
+    <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+    <input type="submit" value="OK">
+</form>
+</body>
+</html>
