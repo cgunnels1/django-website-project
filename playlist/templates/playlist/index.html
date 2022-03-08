@@ -48,13 +48,17 @@
         <tr>
             <th>Song</th>
             <th>Songwriter</th>
+            <th>Thumbnail</th>
         </tr>
             {% for song in song_objects %}
                 <tr>
                     <td>{{ song.title }}</td>
                     <td>{{ song.writer }}</td>
+                    <td>{{ song.thumb.url }}</td>
+
                  </tr>
             {% endfor %}
     </table>
+
 </body>
 </html>

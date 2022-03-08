@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+        li {
+          float: left;
+        }
+        li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+
+        li a:hover {
+          background-color: #111;
+        }
+       </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Artist</th>
+            <th></th>
+
+        </tr>
+            {% for gallery in gallery_objects %}
+                <tr>
+                    <td>{{ gallery.title }}</td>
+                    <td>{{ gallery.artist }}</td>
+                    <td><img src="{{ gallery.image.url }}" class="img-responsive" style="width: 50%; float: left; margin-right: 10px;" /></td>
+
+
+
+                 </tr>
+            {% endfor %}
+    </table>
+
+</body>
+</html>
