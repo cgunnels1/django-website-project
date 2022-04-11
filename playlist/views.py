@@ -2,29 +2,28 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Song
 
+from django.views.decorators.csrf import csrf_protect
+
+# from pygame import mixer
+# mixer.init()
 
 # Create your views here.
 
-# def index(request):
-#     return HttpResponse("Hello, world. You're at the polls index.")
-
-# def index_view(request):
-#     return render(request, 'playlist/index.html')
 
 def song_list_view(request):
     song_objects = Song.objects.all()
     context = {
         'song_objects': song_objects
     }
+    if request.method == 'GET':
+        
+        print("Success")
+        # form = SongForm(request.POST)
+        # if form.is_valid():
+        #     #return HttpResponse("Success")
+        #     print("Success")
+        # 
+        # else:
+        #     form = SongForm()
+
     return render(request, "playlist/index.html", context)
-
-# def Audio_store(request):
-#     if request.method == 'POST':
-#         form = AudioForm(request.POST,request.FILES or None)
-#         if form.is_valid():
-#             form.save()
-#             return HttpResponse('successfully uploaded')
-#     else:
-#         form = AudioForm()
-#     return render(request, 'playlist/aud.html', {'form' : form})
-

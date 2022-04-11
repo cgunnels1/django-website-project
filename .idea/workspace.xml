@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af029034-055a-4ee2-ad1a-486390bdb6dd" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/django-website-project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/songs/ambient-piano-10781.mp3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playlist/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/playlist/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlist/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/playlist/migrations/0002_rename_name_song_title.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/playlist/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/playlist/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playlist/templates/playlist/aud.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/playlist/templates/playlist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/playlist/templates/playlist/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playlist/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/playlist/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playlist/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/playlist/views.py" afterDir="false" />
@@ -32,6 +34,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/gallery/forms.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/gallery/admin.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/playlist/admin.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/playlist/models.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/gallery/models.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/gallery/views.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/playlist/forms.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/playlist/urls.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/playlist/views.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/gallery/urls.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="236xixyTsgSGJRYMvEBB768em16" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -41,7 +58,8 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../hangman-game" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../projects/projects" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -70,6 +88,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

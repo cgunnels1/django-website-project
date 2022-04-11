@@ -48,17 +48,34 @@
         <tr>
             <th>Song</th>
             <th>Songwriter</th>
-            <th>Thumbnail</th>
+            <th>url</th>
         </tr>
             {% for song in song_objects %}
                 <tr>
                     <td>{{ song.title }}</td>
                     <td>{{ song.writer }}</td>
-                    <td>{{ song.thumb.url }}</td>
+                    <td>{{ song.audioFile.url }}
+                        <form action="localhost:8080/playlist/" method ="get">
+                            {% csrf_token %}
+                            <input type="submit" name="button" value="play">
+                        </form>
+                    </td>
 
                  </tr>
             {% endfor %}
     </table>
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
