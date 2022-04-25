@@ -1,0 +1,12 @@
+{% extends "playlist/base.html" %}
+{% block content %}
+    {% for song in song_objects %}
+        <h1>{{ song.title }}</h1>
+        <h2>{{ song.writer }}</h2>
+        <div align="center">
+        <audio controls>
+          <source src="{{ song.audioFile.url }}" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>
+    {% endfor %}
+{% endblock%}

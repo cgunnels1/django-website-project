@@ -1,0 +1,23 @@
+{% extends "playlist/base.html" %}
+{% block content %}
+    <table>
+        <tr>
+            <th>Song</th>
+            <th>Songwriter</th>
+            <th>url</th>
+        </tr>
+            {% for song in song_objects %}
+                <tr>
+                    <td>{{ song.title }}</td>
+                    <td>{{ song.writer }}</td>
+                    <td>
+                        <form action="{{ song.id }}/" method ="post">
+                            {% csrf_token %}
+                            <input type="submit" name="button" value="play">
+                        </form>
+                    </td>
+
+                 </tr>
+            {% endfor %}
+    </table>
+{% endblock%}
