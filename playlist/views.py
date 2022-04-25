@@ -2,11 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Song
 
-from django.views.decorators.csrf import csrf_protect
-
-# from pygame import mixer
-# mixer.init()
-
 # Create your views here.
 
 
@@ -27,3 +22,10 @@ def song_list_view(request):
         #     form = SongForm()
 
     return render(request, "playlist/index.html", context)
+
+def song_play_view(request, id):
+    song_objects = Song.objects.filter(id=id)
+    context = {
+        'song_objects': song_objects
+    }
+    return render(request, "playlist/song.html", context)

@@ -1,49 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Index</title>
-    <style>
-        table {
-          font-family: arial, sans-serif;
-          border-collapse: collapse;
-          width: 100%;
-        }
-
-        td, th {
-          border: 1px solid #dddddd;
-          text-align: left;
-          padding: 8px;
-        }
-
-        tr:nth-child(even) {
-          background-color: #dddddd;
-        }
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-        li {
-          float: left;
-        }
-        li a {
-          display: block;
-          color: white;
-          text-align: center;
-          padding: 14px 16px;
-          text-decoration: none;
-        }
-
-        li a:hover {
-          background-color: #111;
-        }
-       </style>
-</head>
-<body>
-
+{% extends "playlist/base.html" %}
+{% block content %}
     <table>
         <tr>
             <th>Song</th>
@@ -54,8 +10,8 @@
                 <tr>
                     <td>{{ song.title }}</td>
                     <td>{{ song.writer }}</td>
-                    <td>{{ song.audioFile.url }}
-                        <form action="localhost:8080/playlist/" method ="get">
+                    <td>
+                        <form action="{{ song.id }}/" method ="post">
                             {% csrf_token %}
                             <input type="submit" name="button" value="play">
                         </form>
@@ -64,18 +20,5 @@
                  </tr>
             {% endfor %}
     </table>
+{% endblock%}
 
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
-</html>

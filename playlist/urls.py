@@ -10,6 +10,7 @@ urlpatterns = [
     #path('', views.index, name='index'),
     #path('', views.index_view),
     path('', views.song_list_view),
+    path('<int:id>/', views.song_play_view),
     # path('audio/', views.Audio_store)
 ]
 
